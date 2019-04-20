@@ -83,6 +83,10 @@ http://www.runoob.com/sqlite/
 
 table 有 search_ptt , search_querywho
 以下都已經在bash底下執行 sqlite3 db.sqlite3
+
+
+
+
 | 指令 | 功能 |
 | -------- | -------- |
 | .tables |查現有表|
