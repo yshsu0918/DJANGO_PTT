@@ -1,7 +1,5 @@
 # DJANGO_PTT
 
-https://hackmd.io/eaVu7GNjS5m88kGA8qt61g?both
-
 ## 目錄
 
 - 目的
@@ -86,7 +84,7 @@ http://www.runoob.com/sqlite/
 table 有 search_ptt , search_querywho
 以下都已經在bash底下執行 sqlite3 db.sqlite3
 | 指令 | 功能 |
-|-------|-------|
+| -------- | -------- |
 | .tables |查現有表|
 | SELECT * FROM search_ptt WHERE id='a000000000' | 查a000000000 所有發文 |
 | sqlite3 -csv "SELECT * FROM search_ptt ORDER BY id " > a.csv | 輸出到依據id排順序的 csv檔 |
