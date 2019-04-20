@@ -1,5 +1,7 @@
 # DJANGO_PTT
 
+https://hackmd.io/eaVu7GNjS5m88kGA8qt61g?both
+
 ## 目錄
 
 - 目的
@@ -67,4 +69,24 @@ URL: ...
 | 日期 | 做了什麼 | 時長 |
 | -------- | -------- | -------- |
 | 20180420 | 上傳github, 解決 permission denied (publickey)   | 1 hr |
-| 20180420 | 改README.md   | 1 hr |
+| 20180420 | README.md   | 1 hr |
+| 20180421 | 研究如何改DB | 1hr |
+| 20180421 | 在id上面加index | 1hr |
+| 20180421 | bug , database lock, 可能發生在前次更新還沒結束的時候 | 10 min |
+| 20180421 | 紀錄所用指令 | 15min |
+
+
+## SQL
+
+
+環境是sqlite3
+
+http://www.runoob.com/sqlite/
+
+table 有 search_ptt , search_querywho
+以下都已經在bash底下執行 sqlite3 db.sqlite3
+| 指令 | 功能 |
+|-------|-------|
+| .tables |查現有表|
+| SELECT * FROM search_ptt WHERE id='a000000000' | 查a000000000 所有發文 |
+| sqlite3 -csv "SELECT * FROM search_ptt ORDER BY id " > a.csv | 輸出到依據id排順序的 csv檔 |
