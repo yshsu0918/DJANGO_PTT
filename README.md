@@ -72,7 +72,7 @@ URL: ...
 | 20180421 | 在id上面加index | 1hr |
 | 20180421 | bug , database lock, 可能發生在前次更新還沒結束的時候 | 10 min |
 | 20180421 | 紀錄所用指令 | 15min |
-
+| 20180422 | change the way to update pttdbs_test.py | 1 hour |
 
 ## SQL
 
