@@ -81,16 +81,16 @@ URL: ...
 
 | 日期 | 做了什麼 | 時長 |
 | -------- | -------- | -------- |
-| 20180420 | 上傳github, 解決 permission denied (publickey)   | 1 hr |
-| 20180420 | README.md   | 1 hr |
-| 20180421 | 研究如何改DB | 1 hr |
-| 20180421 | 在id上面加index | 1 hr |
-| 20180421 | bug , database lock, 可能發生在前次更新還沒結束的時候 | 10 min |
-| 20180421 | 紀錄所用指令 | 15 min |
-| 20180422 | change the way to update pttdbs_test.py | 1 hour |
-| 20180427 | 取得符合時間區間的文章網址列表->多線程取得所有留言->各線程的結果寫進temp裡面->回到單一執行緒並把檔案中資料讀進->sqlite3.excutemany() | 1 hr |
-| 20180427 | 我一直以為加了index之後所做的insert不會更新- - 結果沒問題 測了老半天| 2 hr |
-| 20180427 | 跟室友K聊天，想要把這個功能放在telegram chatbot上面 | 30 min |
+| 20190420 | 上傳github, 解決 permission denied (publickey)   | 1 hr |
+| 20190420 | README.md   | 1 hr |
+| 20190421 | 研究如何改DB | 1 hr |
+| 20190421 | 在id上面加index | 1 hr |
+| 20190421 | bug , database lock, 可能發生在前次更新還沒結束的時候 | 10 min |
+| 20190421 | 紀錄所用指令 | 15 min |
+| 20190422 | change the way to update pttdbs_test.py | 1 hour |
+| 20190427 | 取得符合時間區間的文章網址列表->多線程取得所有留言->各線程的結果寫進temp裡面->回到單一執行緒並把檔案中資料讀進->sqlite3.excutemany() | 1 hr |
+| 20190427 | 我一直以為加了index之後所做的insert不會更新- - 結果沒問題 測了老半天| 2 hr |
+| 20190427 | 跟室友K聊天，想要把這個功能放在telegram chatbot上面 | 30 min |
 
 
 
