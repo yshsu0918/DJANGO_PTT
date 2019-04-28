@@ -48,18 +48,33 @@ URL: ...
 
 ## 擬解決辦法
 
-關於索引
+- 關於索引
 ![](https://i.imgur.com/fGUmbUB.png)
 
-0. 關server
-1. 把原資料庫的資料轉到另外一個資料庫(Beta-db)
-2. 刪除資料庫
-3. 開server
+- 實行 (摁對我就是在舊有資料庫建立索引，~~然後頻繁更新~~)
+	1. 取得符合時間區間的文章網址列表
+	2. 多線程取得所有留言
+	3. 各線程的結果寫進temp裡面
+	4. 回到單一執行緒並把多個temp檔案中資料讀進
+	5. sqlite3.excutemany()
 
-- views.py 讀Beta-storage
-- Beta-db
-	- primary key 為 userID
-	- 內容為所有留言．
+	測試結果可行
+	更新ptt 2  小時內容大概花 2 分鐘
+	更新ptt 24 小時內容大概花 10分鐘
+	query ID 變成 10 秒以內
+
+- 沒有實行的
+
+
+	0. 關server
+	1. 把原資料庫的資料轉到另外一個資料庫(Beta-db)
+	2. 刪除資料庫
+	3. 開server
+
+	- views.py 讀Beta-storage
+	- Beta-db
+		- primary key 為 userID
+		- 內容為所有留言．
 
 
 ## 更新日誌
@@ -68,24 +83,24 @@ URL: ...
 | -------- | -------- | -------- |
 | 20180420 | 上傳github, 解決 permission denied (publickey)   | 1 hr |
 | 20180420 | README.md   | 1 hr |
-| 20180421 | 研究如何改DB | 1hr |
-| 20180421 | 在id上面加index | 1hr |
+| 20180421 | 研究如何改DB | 1 hr |
+| 20180421 | 在id上面加index | 1 hr |
 | 20180421 | bug , database lock, 可能發生在前次更新還沒結束的時候 | 10 min |
-| 20180421 | 紀錄所用指令 | 15min |
+| 20180421 | 紀錄所用指令 | 15 min |
 | 20180422 | change the way to update pttdbs_test.py | 1 hour |
+| 20180427 | 取得符合時間區間的文章網址列表->多線程取得所有留言->各線程的結果寫進temp裡面->回到單一執行緒並把檔案中資料讀進->sqlite3.excutemany() | 1 hr |
+| 20180427 | 我一直以為加了index之後所做的insert不會更新- - 結果沒問題 測了老半天| 2 hr |
+| 20180427 | 跟室友K聊天，想要把這個功能放在telegram chatbot上面 | 30 min |
+
+
 
 ## SQL
 
-
 環境是sqlite3
-
 http://www.runoob.com/sqlite/
 
 table 有 search_ptt , search_querywho
 以下都已經在bash底下執行 sqlite3 db.sqlite3
-
-
-
 
 | 指令 | 功能 |
 | -------- | -------- |
